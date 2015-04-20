@@ -60,11 +60,13 @@ class Auth {
 			} else {
 				$app->url->redirect(self::$loginUrl);
 			}
-		} elseif ($app->route->is() != self::$loginUrl) { ?>
+		} elseif ($app->route->is() != self::$loginUrl) { 
+			$app->url->redirect(self::$loginUrl);
+			/*?>
 			<script type="text/javascript">
 				document.location.href="<?php $app->url->to(self::$loginUrl) ?>";
 			</script>
-		<?php
+		<?php*/
 		}
 	}
 
