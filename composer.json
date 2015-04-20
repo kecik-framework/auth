@@ -1,5 +1,5 @@
 {
-    "name": "kecik/authentic",
+    "name": "kecik/auth",
     "description": "Libraries for Authentication for Kecik Framework",
     "keywords": ["kecik", "framework", "authentic"],
     "license": "MIT",
@@ -16,7 +16,7 @@
         "kecik/session": "1.0.*@dev"
     },
     "autoload": {
-        "psr-4": {"Kecik\\": "Authentic/"}
+        "psr-4": {"Kecik\\": "Auth/"}
     },
     "extra": {
         "branch-alias": {
