@@ -1,0 +1,27 @@
+{
+    "name": "kecik/authentic",
+    "description": "Libraries for Authentication for Kecik Framework",
+    "keywords": ["kecik", "framework", "authentic"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dony Wahyu Isp",
+            "email": "dna.extrim@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "kecik/kecik": "1.0.*@dev",
+        "kecik/mvc": "1.0.*@dev",
+        "kecik/session": "1.0.*@dev"
+    },
+    "autoload": {
+        "psr-4": {"Kecik\\": "Authentic/"}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
