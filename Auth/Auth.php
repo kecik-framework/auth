@@ -59,7 +59,7 @@ class Auth {
 			$model = self::$modelUser;
 			$users = $model::find([
 			'where' => [
-					[self::$fieldUsername, '=', "'".self::username()."'"]
+					[self::$fieldUsername, '=', self::username()]
 				]
 			]);
 
