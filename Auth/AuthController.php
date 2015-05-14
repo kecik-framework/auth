@@ -25,7 +25,8 @@ namespace Kecik;
  **/
 class AuthController extends Controller {
 	public function __construct(Kecik $app) {
-		Auth::init($app);
+		if (!Auth::isLogin())
+			$app->template(Auth::loginTemplate(), TRUE);
 	}
 
 	public function login() {
