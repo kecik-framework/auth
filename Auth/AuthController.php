@@ -41,6 +41,12 @@ class AuthController extends Controller {
 			$this->container = $app->container;
 		if (isset($app->db))
 			$this->db = $app->db;
+		if (isset($app->session))
+			$this->session = $app->session;
+		if (isset($app->cookie))
+			$this->cookie = $app->cookie;
+		if (isset($app->language))
+			$this->language = $app->language;
 	}
 
 	public function login() {
