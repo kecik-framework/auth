@@ -97,8 +97,10 @@ class Auth {
 
 		if (strtolower(substr($_SERVER["HTTP_REFERER"], -(strlen('login')))) === 'login')
 			self::$app->url->redirect('');
-		else
+		else {
 			header('Location: '.$_SERVER["HTTP_REFERER"]);
+			exit();
+		}
 	}
 
 	public static function logout() {
