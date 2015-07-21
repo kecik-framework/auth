@@ -29,7 +29,9 @@ class AuthController extends Controller {
 	protected $assets = '';
 	protected $config = '';
 
-	public function __construct(Kecik $app) {
+	public function __construct() {
+		$app = Kecik::getInstance();
+		
 		if (!Auth::isLogin())
 			$app->template(Auth::loginTemplate(), TRUE);
 
