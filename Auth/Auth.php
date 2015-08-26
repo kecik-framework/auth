@@ -39,9 +39,9 @@ class Auth {
 
 	private static $encryptFunction = NULL;
 
-	public static function init(Kecik $app) {
+	public static function init() {
 
-		self::$app = $app;
+		self::$app = Kecik::getInstance();;
 
 		self::$modelUser = '\\Model\\'.$app->config->get('auth.model');
 		self::$postUsername = $app->config->get('auth.post_username');
