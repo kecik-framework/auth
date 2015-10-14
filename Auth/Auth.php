@@ -43,17 +43,17 @@ class Auth {
 
 		self::$app = Kecik::getInstance();;
 
-		self::$modelUser = '\\Model\\'.$app->config->get('auth.model');
-		self::$postUsername = $app->config->get('auth.post_username');
-		self::$postPassword = $app->config->get('auth.post_password');
+		self::$modelUser = '\\Model\\'.self::$app->config->get('auth.model');
+		self::$postUsername = self::$app->config->get('auth.post_username');
+		self::$postPassword = self::$app->config->get('auth.post_password');
 
-		self::$fieldUsername = $app->config->get('auth.field_username');
-		self::$fieldPassword = $app->config->get('auth.field_password');
-		self::$fieldLevel = $app->config->get('auth.field_level');
-		self::$loginRoute = ($app->config->get('auth.login_route') != '')? $app->config->get('auth.login_route'): self::$loginRoute;
-		self::$logoutRoute = ($app->config->get('auth.logout_route') != '')? $app->config->get('auth.logout_route'): self::$logoutRoute;
-		self::$loginTemplate = ($app->config->get('auth.login_template') != '')? $app->config->get('auth.login_template'): self::$loginTemplate;
-		self::$encryptFunction = ($app->config->get('auth.encrypt_function') != '')? $app->config->get('auth.encrypt_function'): self::$encryptFunction;
+		self::$fieldUsername = self::$app->config->get('auth.field_username');
+		self::$fieldPassword = self::$app->config->get('auth.field_password');
+		self::$fieldLevel = self::$app->config->get('auth.field_level');
+		self::$loginRoute = (self::$app->config->get('auth.login_route') != '')? self::$app->config->get('auth.login_route'): self::$loginRoute;
+		self::$logoutRoute = (self::$app->config->get('auth.logout_route') != '')? self::$app->config->get('auth.logout_route'): self::$logoutRoute;
+		self::$loginTemplate = (self::$app->config->get('auth.login_template') != '')? self::$app->config->get('auth.login_template'): self::$loginTemplate;
+		self::$encryptFunction = (self::$app->config->get('auth.encrypt_function') != '')? self::$app->config->get('auth.encrypt_function'): self::$encryptFunction;
 		
 		if (!empty(self::username())) {
 			$model = self::$modelUser;
@@ -68,7 +68,7 @@ class Auth {
 			} 
 		}
 
-		AuthInit($app);
+		AuthInit(self::$app);
 	}
 
 	public static function login() {
