@@ -11,9 +11,9 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "kecik/kecik": "1.1.*@dev",
-        "kecik/mvc": "1.0.*@dev",
-        "kecik/session": "1.0.*@dev"
+        "kecik/kecik": "1.*@dev",
+        "kecik/mvc": "1.*@dev",
+        "kecik/session": "1.*@dev"
     },
     "autoload": {
         "psr-4": {"Kecik\\": "Auth/"}
