@@ -11,16 +11,16 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "kecik/kecik": "1.*@dev",
-        "kecik/mvc": "1.*@dev",
-        "kecik/session": "1.*@dev"
+        "kecik/kecik": "2.*@dev",
+        "kecik/mvc": "2.*@dev",
+        "kecik/session": "2.*@dev"
     },
     "autoload": {
         "psr-4": {"Kecik\\": "Auth/"}
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0-dev"
         }
     },
     "minimum-stability": "dev"
